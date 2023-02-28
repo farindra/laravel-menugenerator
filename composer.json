@@ -13,16 +13,6 @@
             "name": "Farindra",
             "email": "farindra.project@gmail.com",
             "role": "Developer"
-        },
-    	{
-            "name": "Rendy Harimayco",
-            "email": "rendyharimayco@gmail.com",
-            "role": "Developer"
-        },
-        {
-            "name": "Cristian Garcia",
-            "email": "informacion@cristiangarcia.co",
-            "role" : "Original Developer"
         }
     ],
     "require": {
