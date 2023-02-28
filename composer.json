@@ -2,6 +2,7 @@
     "name": "farindra/laravel-menugenerator",
     "description": "drag and drop menu generator like wordpress for laravel",
     "keywords": ["Laravel menu", "Menu", "Wordpress", "Builder"],
+    "license": "MIT",
     "repositories": [
         {
             "type": "vcs",
