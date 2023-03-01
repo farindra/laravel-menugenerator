@@ -54,12 +54,12 @@ On your view blade file
 @extends('app')
 
 @section('contents')
-    {!! Menu::render() !!}
+    {!! Menugenerator::render() !!}
 @endsection
 
 //YOU MUST HAVE JQUERY LOADED BEFORE menu scripts
 @push('scripts')
-    {!! Menu::scripts() !!}
+    {!! Menugenerator::scripts() !!}
 @endpush
 ```
 
@@ -101,7 +101,7 @@ $public_menu = $menu->items->toArray();
 ##### or Using helper
 ```php
 // Using Helper 
-$public_menu = Menu::getByName('Public'); //return array
+$public_menu = Menugenerator::getByName('Public'); //return array
 
 ```
 
@@ -148,7 +148,7 @@ use Farindra\Menugenerator\Facades\Menugenerator;
 Parameter: Menu ID
 Return: Array
 */
-$menuList = Menu::get(1);
+$menuList = Menugenerator::get(1);
 ```
 
 ### Get Menu Items By Menu Name
@@ -162,7 +162,7 @@ use Farindra\Menugenerator\Facades\Menugenerator;
 Parameter: Menu ID
 Return: Array
 */
-$menuList = Menu::getByName('Admin');
+$menuList = Menugenerator::getByName('Admin');
 ```
 
 ### Customization
