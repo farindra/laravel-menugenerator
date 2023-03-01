@@ -1,10 +1,10 @@
 <?php
 
-namespace Harimayco\Menu;
+namespace Farindra\Menugenerator;
 
 use App\Http\Requests;
-use Harimayco\Menu\Models\Menus;
-use Harimayco\Menu\Models\MenuItems;
+use Farindra\Menugenerator\Models\Menus;
+use Farindra\Menugenerator\Models\MenuItems;
 use Illuminate\Support\Facades\DB;
 
 class WMenu

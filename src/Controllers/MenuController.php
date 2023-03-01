@@ -1,13 +1,13 @@
 <?php
 
-namespace Harimayco\Menu\Controllers;
+namespace Farindra\Menugenerator\Controllers;
 
-use Harimayco\Menu\Facades\Menu;
+use Farindra\Menugenerator\Facades\Menugenerator;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use Harimayco\Menu\Models\Menus;
-use Harimayco\Menu\Models\MenuItems;
+use Farindra\Menugenerator\Models\Menus;
+use Farindra\Menugenerator\Models\MenuItems;
 
 class MenuController extends Controller
 {

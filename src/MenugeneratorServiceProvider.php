@@ -1,11 +1,11 @@
 <?php
 
-namespace Harimayco\Menu;
+namespace Farindra\Menugenerator;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Foundation\AliasLoader;
 
-class MenuServiceProvider extends ServiceProvider
+class MenugeneratorServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
@@ -50,7 +50,7 @@ class MenuServiceProvider extends ServiceProvider
             return new WMenu();
         });
 
-        $this->app->make('Harimayco\Menu\Controllers\MenuController');
+        $this->app->make('Farindra\Menugenerator\Controllers\MenuController');
         $this->mergeConfigFrom(
             __DIR__ . '/../config/menu.php',
             'menu'

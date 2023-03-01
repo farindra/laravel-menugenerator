@@ -28,7 +28,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Farindra\\Menugenerator\\MenuServiceProvider"
+                "Farindra\\Menugenerator\\MenugeneratorServiceProvider"
             ],
             "aliases": {
                 "Menugenerator": "Farindra\\Menugenerator\\Facades\\Menugenerator"

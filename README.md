@@ -20,19 +20,19 @@ composer require harimayco/laravel-menu
 2. Add the following class, to "providers" array in the file config/app.php (optional on laravel 5.5)
 
 ```php
-Harimayco\Menu\MenuServiceProvider::class,
+Farindra\Menugenerator\MenugeneratorServiceProvider::class,
 ```
 
 3. add facade in the file config/app.php (optional on laravel 5.5)
 
 ```php
-'Menu' => Harimayco\Menu\Facades\Menu::class,
+'Menu' => Farindra\Menugenerator\Facades\Menugenerator::class,
 ```
 
 4. Run publish
 
 ```php
-php artisan vendor:publish --provider="Harimayco\Menu\MenuServiceProvider"
+php artisan vendor:publish --provider="Farindra\Menugenerator\MenugeneratorServiceProvider"
 ```
 
 5. Configure (optional) in **_config/menu.php_** :
@@ -73,8 +73,8 @@ On your view blade file
 Call the model class
 
 ```php
-use Harimayco\Menu\Models\Menus;
-use Harimayco\Menu\Models\MenuItems;
+use Farindra\Menugenerator\Models\Menus;
+use Farindra\Menugenerator\Models\MenuItems;
 
 ```
 
@@ -147,7 +147,7 @@ Now inside your blade template file place the menu using this simple example
 ### Get Menu Items By Menu ID
 
 ```php
-use Harimayco\Menu\Facades\Menu;
+use Farindra\Menugenerator\Facades\Menugenerator;
 ...
 /*
 Parameter: Menu ID
@@ -161,7 +161,7 @@ $menuList = Menu::get(1);
 In this example, you must have a menu named _Admin_
 
 ```php
-use Harimayco\Menu\Facades\Menu;
+use Farindra\Menugenerator\Facades\Menugenerator;
 ...
 /*
 Parameter: Menu ID

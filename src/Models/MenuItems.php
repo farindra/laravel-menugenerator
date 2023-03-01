@@ -1,6 +1,6 @@
 <?php
 
-namespace Harimayco\Menu\Models;
+namespace Farindra\Menugenerator\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -33,11 +33,11 @@ class MenuItems extends Model
 
     public function parent_menu()
     {
-        return $this->belongsTo('Harimayco\Menu\Models\Menus', 'menu');
+        return $this->belongsTo('Farindra\Menugenerator\Models\Menus', 'menu');
     }
 
     public function child()
     {
-        return $this->hasMany('Harimayco\Menu\Models\MenuItems', 'parent')->orderBy('sort', 'ASC');
+        return $this->hasMany('Farindra\Menugenerator\Models\MenuItems', 'parent')->orderBy('sort', 'ASC');
     }
 }
