@@ -1,8 +1,8 @@
 <?php
 
-Route::group(['middleware' => config('menu.middleware')], function () {
+Route::group(['middleware' => config('menugenerator.middleware')], function () {
     //Route::get('wmenuindex', array('uses'=>'\Farindra\Menugenerator\Controllers\MenuController@wmenuindex'));
-    $path = rtrim(config('menu.route_path'));
+    $path = rtrim(config('menugenerator.route_path'));
     Route::post($path . '/addcustommenu', array('as' => 'addcustommenu', 'uses' => '\Farindra\Menugenerator\Controllers\MenuController@addcustommenu'));
     Route::post($path . '/deleteitemmenu', array('as' => 'deleteitemmenu', 'uses' => '\Farindra\Menugenerator\Controllers\MenuController@deleteitemmenu'));
     Route::post($path . '/deletemenug', array('as' => 'deletemenug', 'uses' => '\Farindra\Menugenerator\Controllers\MenuController@deletemenug'));

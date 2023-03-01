@@ -27,10 +27,10 @@ class FarindraMenugenerator
             $menus = $menuitems->getall(request()->input("menu"));
 
             $data = ['menus' => $menus, 'indmenu' => $menu, 'menulist' => $menulist];
-            if( config('menu.use_roles')) {
-                $data['roles'] = DB::table(config('menu.roles_table'))->select([config('menu.roles_pk'),config('menu.roles_title_field')])->get();
-                $data['role_pk'] = config('menu.roles_pk');
-                $data['role_title_field'] = config('menu.roles_title_field');
+            if( config('menugenerator.use_roles')) {
+                $data['roles'] = DB::table(config('menugenerator.roles_table'))->select([config('menugenerator.roles_pk'),config('menugenerator.roles_title_field')])->get();
+                $data['role_pk'] = config('menugenerator.roles_pk');
+                $data['role_title_field'] = config('menugenerator.roles_title_field');
             }
             return view('menugenerator::menu-html', $data);
         }

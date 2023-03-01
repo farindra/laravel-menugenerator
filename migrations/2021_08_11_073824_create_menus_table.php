@@ -13,7 +13,7 @@ class CreateMenusTable extends Migration
      */
     public function up()
     {
-        Schema::create( config('menu.table_prefix') . config('menu.table_name_menus'), function (Blueprint $table) {
+        Schema::create( config('menugenerator.table_prefix') . config('menugenerator.table_name_menus'), function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('description',100)->nullable();
@@ -30,6 +30,6 @@ class CreateMenusTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists( config('menu.table_prefix') . config('menu.table_name_menus'));
+        Schema::dropIfExists( config('menugenerator.table_prefix') . config('menugenerator.table_name_menus'));
     }
 }

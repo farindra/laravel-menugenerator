@@ -13,7 +13,7 @@ class CreateMenuItemsTable extends Migration
      */
     public function up()
     {
-        Schema::create( config('menu.table_prefix') . config('menu.table_name_items') , function (Blueprint $table) {
+        Schema::create( config('menugenerator.table_prefix') . config('menugenerator.table_name_items') , function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('label');
             $table->string('link');
@@ -29,7 +29,7 @@ class CreateMenuItemsTable extends Migration
             $table->string('status', 20)->default('active');
             $table->timestamps();
 
-            $table->foreign('menu')->references('id')->on(config('menu.table_prefix') . config('menu.table_name_menus'))
+            $table->foreign('menu')->references('id')->on(config('menugenerator.table_prefix') . config('menugenerator.table_name_menus'))
             ->onDelete('cascade')
             ->onUpdate('cascade');
         });
@@ -42,6 +42,6 @@ class CreateMenuItemsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists( config('menu.table_prefix') . config('menu.table_name_items'));
+        Schema::dropIfExists( config('menugenerator.table_prefix') . config('menugenerator.table_name_items'));
     }
 }

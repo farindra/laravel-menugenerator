@@ -16,7 +16,7 @@ class MenuItems extends Model
     public function __construct(array $attributes = [])
     {
         //parent::construct( $attributes );
-        $this->table = config('menu.table_prefix') . config('menu.table_name_items');
+        $this->table = config('menugenerator.table_prefix') . config('menugenerator.table_name_items');
     }
 
     public function getsons($id)
