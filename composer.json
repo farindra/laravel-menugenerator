@@ -22,19 +22,19 @@
     },
     "autoload": {
         "psr-4": {
-          "Harimayco\\Menu\\": "src/"
+          "Farindra\\Menugenerator\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Harimayco\\Menu\\MenuServiceProvider"
+                "Farindra\\Menugenerator\\MenuServiceProvider"
             ],
             "aliases": {
-                "Menu": "Harimayco\\Menu\\Facades\\Menu"
+                "Menugenerator": "Farindra\\Menugenerator\\Facades\\Menugenerator"
             }
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": false
+    "prefer-stable": true
 }
