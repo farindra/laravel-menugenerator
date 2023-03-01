@@ -7,7 +7,7 @@ use Farindra\Menugenerator\Models\Menus;
 use Farindra\Menugenerator\Models\MenuItems;
 use Illuminate\Support\Facades\DB;
 
-class WMenu
+class FarindraMenugenerator
 {
 
     public function render()
@@ -20,7 +20,7 @@ class WMenu
         //$roles = Role::all();
 
         if ((request()->has("action") && empty(request()->input("menu"))) || request()->input("menu") == '0') {
-            return view('wMenugenerator::menu-html')->with("menulist" , $menulist);
+            return view('menugenerator::menu-html')->with("menulist" , $menulist);
         } else {
 
             $menu = Menus::find(request()->input("menu"));
@@ -32,14 +32,14 @@ class WMenu
                 $data['role_pk'] = config('menu.roles_pk');
                 $data['role_title_field'] = config('menu.roles_title_field');
             }
-            return view('wMenugenerator::menu-html', $data);
+            return view('menugenerator::menu-html', $data);
         }
 
     }
 
     public function scripts()
     {
-        return view('wMenugenerator::scripts');
+        return view('menugenerator::scripts');
     }
 
     public function select($name = "menu", $menulist = array())

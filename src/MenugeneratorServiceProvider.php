@@ -18,14 +18,14 @@ class MenugeneratorServiceProvider extends ServiceProvider
             require  __DIR__ . '/routes.php';
         }
 
-        $this->loadViewsFrom(__DIR__ . '/Views', 'wmenu');
+        $this->loadViewsFrom(__DIR__ . '/Views', 'menugenerator');
 
         $this->publishes([
             __DIR__ . '/../config/menugenerator.php'  => config_path('menugenerator.php'),
         ], 'config');
 
         $this->publishes([
-            __DIR__ . '/Views'   => resource_path('views/vendor/wmenu'),
+            __DIR__ . '/Views'   => resource_path('views/vendor/menugenerator'),
         ], 'view');
 
         $this->publishes([
@@ -47,13 +47,13 @@ class MenugeneratorServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->bind('farindra-menugenerator', function () {
-            return new WMenu();
+            return new FarindraMenugenerator();
         });
 
         $this->app->make('Farindra\Menugenerator\Controllers\MenuController');
         $this->mergeConfigFrom(
-            __DIR__ . '/../config/menu.php',
-            'menu'
+            __DIR__ . '/../config/menugenerator.php',
+            'menugenerator'
         );
     }
 }
