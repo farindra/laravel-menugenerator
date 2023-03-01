@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMenusWpTable extends Migration
+class CreateMenusTable extends Migration
 {
     /**
      * Run the migrations.
@@ -16,6 +16,9 @@ class CreateMenusWpTable extends Migration
         Schema::create( config('menu.table_prefix') . config('menu.table_name_menus'), function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
+            $table->string('description',100)->nullable();
+            $table->longText('properties')->default('[]');
+            $table->string('status', 20)->default('active');
             $table->timestamps();
         });
     }

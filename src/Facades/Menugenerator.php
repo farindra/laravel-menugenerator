@@ -9,6 +9,6 @@ class Menugenerator extends Facade {
      */
     protected static function getFacadeAccessor()
     {
-        return 'harimayco-menu';
+        return 'farindra-menugenerator';
     }
 }

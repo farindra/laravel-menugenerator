@@ -21,7 +21,7 @@ class MenugeneratorServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__ . '/Views', 'wmenu');
 
         $this->publishes([
-            __DIR__ . '/../config/menu.php'  => config_path('menu.php'),
+            __DIR__ . '/../config/menugenerator.php'  => config_path('menugenerator.php'),
         ], 'config');
 
         $this->publishes([
@@ -29,12 +29,12 @@ class MenugeneratorServiceProvider extends ServiceProvider
         ], 'view');
 
         $this->publishes([
-            __DIR__ . '/../assets' => public_path('vendor/harimayco-menu'),
+            __DIR__ . '/../assets' => public_path('vendor/farindra-menugenerator'),
         ], 'public');
 
         $this->publishes([
-            __DIR__ . '/../migrations/2017_08_11_073824_create_menus_wp_table.php' => database_path('migrations/2017_08_11_073824_create_menus_wp_table.php'),
-            __DIR__ . '/../migrations/2017_08_11_074006_create_menu_items_wp_table.php' => database_path('migrations/2017_08_11_074006_create_menu_items_wp_table.php'),
+            __DIR__ . '/../migrations/2017_08_11_073824_create_menus_table.php' => database_path('migrations/2022_08_11_073824_create_menus_table.php'),
+            __DIR__ . '/../migrations/2017_08_11_074006_create_menu_items_table.php' => database_path('migrations/2012_08_11_074006_create_menu_items_table.php'),
             __DIR__ . '/../migrations/2019_01_05_293551_add-role-id-to-menu-items-table.php' => database_path('2019_01_05_293551_add-role-id-to-menu-items-table.php'),
         ], 'migrations');
     }
@@ -46,7 +46,7 @@ class MenugeneratorServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('harimayco-menu', function () {
+        $this->app->bind('farindra-menugenerator', function () {
             return new WMenu();
         });
 
