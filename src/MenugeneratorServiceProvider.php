@@ -33,9 +33,9 @@ class MenugeneratorServiceProvider extends ServiceProvider
         ], 'public');
 
         $this->publishes([
-            __DIR__ . '/../migrations/2017_08_11_073824_create_menus_table.php' => database_path('migrations/2022_08_11_073824_create_menus_table.php'),
-            __DIR__ . '/../migrations/2017_08_11_074006_create_menu_items_table.php' => database_path('migrations/2012_08_11_074006_create_menu_items_table.php'),
-            __DIR__ . '/../migrations/2019_01_05_293551_add-role-id-to-menu-items-table.php' => database_path('2019_01_05_293551_add-role-id-to-menu-items-table.php'),
+            __DIR__ . '/../migrations/2021_08_11_073824_create_menus_table.php' => database_path('migrations/2021_08_11_073824_create_menus_table.php'),
+            __DIR__ . '/../migrations/2021_08_11_074006_create_menu_items_table.php' => database_path('migrations/2021_08_11_074006_create_menu_items_table.php'),
+            __DIR__ . '/../migrations/2022_01_05_293551_add-role-id-to-menu-items-table.php' => database_path('2022_01_05_293551_add-role-id-to-menu-items-table.php'),
         ], 'migrations');
     }
 
